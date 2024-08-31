@@ -4,3 +4,4 @@ Repository dedicated to the course "GO: Developing a REST API." This project inv
 ## Technologies
 - Go
   - Air
+  - Gorilla Mux
