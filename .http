@@ -1,0 +1,6 @@
+### Get one
+GET http://localhost:8000/api/personalities/2 HTTP/1.1
+
+### Get all
+GET http://localhost:8000/api/personalities HTTP/1.1
+Accept: application/json
