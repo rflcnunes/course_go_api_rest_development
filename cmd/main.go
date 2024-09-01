@@ -11,10 +11,10 @@ func main() {
 	fmt.Println("Hello Friend!")
 
 	models.Personalities = []models.Personality{
-		{Name: "John Doe", History: "Lorem Ipsum Dolor Sit Amet for John Doe"},
-		{Name: "Jane Smith", History: "Lorem Ipsum Dolor Sit Amet for Jane Smith"},
-		{Name: "Michael Johnson", History: "Lorem Ipsum Dolor Sit Amet for Michael Johnson"},
-		{Name: "Emily Davis", History: "Lorem Ipsum Dolor Sit Amet for Emily Davis"},
+		{ID: 1, Name: "John Doe", History: "Lorem Ipsum Dolor Sit Amet for John Doe"},
+		{ID: 2, Name: "Jane Smith", History: "Lorem Ipsum Dolor Sit Amet for Jane Smith"},
+		{ID: 3, Name: "Michael Johnson", History: "Lorem Ipsum Dolor Sit Amet for Michael Johnson"},
+		{ID: 4, Name: "Emily Davis", History: "Lorem Ipsum Dolor Sit Amet for Emily Davis"},
 	}
 
 	config.Setup()
