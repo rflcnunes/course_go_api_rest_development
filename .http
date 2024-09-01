@@ -4,3 +4,12 @@ GET http://localhost:8000/api/personalities/2 HTTP/1.1
 ### Get all
 GET http://localhost:8000/api/personalities HTTP/1.1
 Accept: application/json
+
+### Create one
+POST http://localhost:8000/api/personalities HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "history": "testtest"
+}

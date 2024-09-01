@@ -10,5 +10,6 @@ func NewRouter() *mux.Router {
 	r.HandleFunc("/", controllers.Home)
 	r.HandleFunc("/api/personalities", controllers.GetAllPersonalities).Methods("GET")
 	r.HandleFunc("/api/personalities/{id}", controllers.GetPersonality).Methods("GET")
+	r.HandleFunc("/api/personalities", controllers.CreatePersonality).Methods("POST")
 	return r
 }
