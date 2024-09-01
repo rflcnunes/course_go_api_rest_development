@@ -2,9 +2,12 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"net/http"
 
+	"github.com/rflcnunes/course_go_api_rest_development/config"
 	"github.com/rflcnunes/course_go_api_rest_development/internal/models"
-	"github.com/rflcnunes/course_go_api_rest_development/pkg/config"
+	"github.com/rflcnunes/course_go_api_rest_development/internal/router"
 )
 
 func main() {
@@ -18,4 +21,6 @@ func main() {
 	}
 
 	config.Setup()
+	r := router.NewRouter()
+	log.Fatal(http.ListenAndServe(":8000", r))
 }
