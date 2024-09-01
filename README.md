@@ -5,3 +5,7 @@ Repository dedicated to the course "GO: Developing a REST API." This project inv
 - Go
   - Air
   - Gorilla Mux
+  - GORM
+  - GodotEnv
+- Docker
+- Postgres
