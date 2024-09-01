@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/gorilla/handlers"
 	"github.com/rflcnunes/course_go_api_rest_development/config"
 	"github.com/rflcnunes/course_go_api_rest_development/internal/router"
 )
@@ -14,5 +15,5 @@ func main() {
 
 	config.Setup()
 	r := router.NewRouter()
-	log.Fatal(http.ListenAndServe(":8000", r))
+	log.Fatal(http.ListenAndServe(":8000", handlers.CORS(handlers.AllowedOrigins([]string{"*"}))(r)))
 }
