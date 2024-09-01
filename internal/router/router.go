@@ -3,6 +3,7 @@ package router
 import (
 	"github.com/gorilla/mux"
 	"github.com/rflcnunes/course_go_api_rest_development/internal/controllers"
+	"github.com/rflcnunes/course_go_api_rest_development/pkg/middleware"
 )
 
 var PATH = "/api/personalities"
@@ -10,6 +11,9 @@ var PATH_ID = "/api/personalities/{id}"
 
 func NewRouter() *mux.Router {
 	r := mux.NewRouter()
+
+	r.Use(middleware.ContentTypeMiddleware)
+
 	r.HandleFunc("/", controllers.Home)
 	r.HandleFunc(PATH, controllers.GetAllPersonalities).Methods("GET")
 	r.HandleFunc(PATH_ID, controllers.GetPersonality).Methods("GET")
