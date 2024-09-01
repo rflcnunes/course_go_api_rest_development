@@ -1,5 +1,5 @@
 ### Get one
-GET http://localhost:8000/api/personalities/2 HTTP/1.1
+GET http://localhost:8000/api/personalities/11 HTTP/1.1
 
 ### Get all
 GET http://localhost:8000/api/personalities HTTP/1.1
@@ -14,4 +14,13 @@ content-type: application/json
     "history": "testtest"
 }
 ### Delete one
-DELETE http://localhost:8000/api/personalities/2 HTTP/1.1
+DELETE http://localhost:8000/api/personalities/10 HTTP/1.1
+
+### Update one
+PUT http://localhost:8000/api/personalities/11 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample edited 2",
+    "history": "testtest"
+}
