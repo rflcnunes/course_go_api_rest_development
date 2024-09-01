@@ -13,3 +13,5 @@ content-type: application/json
     "name": "sample",
     "history": "testtest"
 }
+### Delete one
+DELETE http://localhost:8000/api/personalities/2 HTTP/1.1

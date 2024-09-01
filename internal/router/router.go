@@ -11,5 +11,6 @@ func NewRouter() *mux.Router {
 	r.HandleFunc("/api/personalities", controllers.GetAllPersonalities).Methods("GET")
 	r.HandleFunc("/api/personalities/{id}", controllers.GetPersonality).Methods("GET")
 	r.HandleFunc("/api/personalities", controllers.CreatePersonality).Methods("POST")
+	r.HandleFunc("/api/personalities/{id}", controllers.DeletePersonality).Methods("DELETE")
 	return r
 }
